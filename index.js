@@ -1,30 +1,47 @@
-let a = [1,2,3,4,5] ;
-let b = [6,7,8,9] ;
+let a = [1,2,3,4];
+let b = [6,7,8,9];
 
-for (let i = 0; i<a.length; i++);
-for (let j = 0; j<b.length; j++);
-
-const addition = (i,j) => {
+function addition(i,j){
     let x = i + j ;
-    console.log("Subiraneto e =" ,x)
+    return x ;
 };
 
-const subtract = (i,j) => {
+function subtract (i,j){
     let x = i - j ;
-    console.log("Izvajdaneto e =" ,x)
+    return x ;
 };
 
-const multiply = (i,j) => {
+function multiply(i,j){
     let x = i * j ;
-    console.log("Umnojenieto e =" ,x)
+    return x ;
 };
 
-const division = (i,j) => {
+function division(i,j) {
     let x = i/j;
-    console.log("Deleneto e =",x)
+    return x.toFixed(2) ;
 };
 
-console.log(addition());
-console.log(subtract());
-console.log(multiply());
-console.log(division());
+//console.log(){addition(),subtract(),multiply(),division()};
+
+// console.log(addition(a[0],b[0]));
+// console.log(subtract(a,b));
+// console.log(multiply(a,b));
+// console.log(division(a,b));
+
+let m =[];
+let m1 =[];
+let m2 =[];
+let m3 =[];
+
+for(let i = 0; i<a.length; i++){
+    m.push(addition(a[i],b[i]));
+    m1.push(subtract(a[i],b[i]));
+    m2.push(multiply(a[i],b[i]));
+    m3.push(division(a[i],b[i]));
+};
+
+console.log("Addition",m);
+console.log("subtract",m1);
+console.log("multiply",m2);
+console.log("division",m3);
+
